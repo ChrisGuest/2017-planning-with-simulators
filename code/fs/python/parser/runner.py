@@ -90,6 +90,14 @@ def move_files(instance, domain, target_dir, use_vanilla):
             shutil.copy(base_dir + '/external.hxx', target_dir)
             if os.path.isfile(base_dir + '/external.cxx'):  # We also copy a possible cxx implementation file
                 shutil.copy(base_dir + '/external.cxx', target_dir)
+            if os.path.isfile(base_dir + '/translating.hxx'):  # We also copy a tranlaing hxx header file for generating the initial state from pddl problem file
+                shutil.copy(base_dir + '/translating.hxx', target_dir)
+            if os.path.isfile(base_dir + '/epistemic_checker.cxx'):  # We also copy an epistemic relation checker cxx
+                shutil.copy(base_dir + '/epistemic_checker.cxx', target_dir)
+            if os.path.isfile(base_dir + '/epistemic_checker.hxx'):  # We also copy an epistemic relation checker cxx
+                shutil.copy(base_dir + '/epistemic_checker.hxx', target_dir)
+            if os.path.isfile(base_dir + '/domain.hxx'):  # We also copy a domain header file, which specify the domain dependent seeing rules
+                shutil.copy(base_dir + '/domain.hxx', target_dir)
 
         else:
             default = tplManager.get('external_default.hxx').substitute()  # No substitutions for the default template
