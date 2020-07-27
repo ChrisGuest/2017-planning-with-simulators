@@ -4,6 +4,7 @@
 #include <memory>
 #include <limits>
 
+#include <functional>
 #include <vector>
 #include <map>
 #include <set>
