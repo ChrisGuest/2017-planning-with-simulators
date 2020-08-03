@@ -24,6 +24,9 @@ public:
 	
 	typedef std::map<std::tuple<int, int, int, int>, int> Arity4Map;
 	typedef boost::container::flat_map<std::tuple<int, int, int, int>, int> BoostArity4Map;
+
+	typedef std::map<std::vector<int>, int> ArityNMap;
+	typedef boost::container::flat_map<std::vector<int>, int> BoostArityNMap;
 	
 	typedef std::set<int> UnarySet;
 	typedef boost::container::flat_set<int> BoostUnarySet;
@@ -34,8 +37,8 @@ public:
 	typedef std::set<std::tuple<int, int, int>> Arity3Set;
 	typedef boost::container::flat_set<std::tuple<int, int, int>> BoostArity3Set;
 	
-	typedef std::set<std::tuple<int, int, int, int>> Arity4Set;
-	typedef boost::container::flat_set<std::tuple<int, int, int, int>> BoostArity4Set;
+	typedef std::set<std::vector<int>> ArityNSet;
+	typedef boost::container::flat_set<std::vector<int>> BoostArityNSet;
 	
 	
 	//! For the sake of completeness
